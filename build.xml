@@ -1,0 +1,121 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<project name = "MMBT" basedir = "." default = "build_and_run">
+    <property file = "build.properties"/>
+    <property name = "src.dir" value = "src"/>
+    <property name = "build.dir" value = "build"/>
+    <property name = "dist.dir" value = "dest"/>
+    <property name = "lib.dir" value = "lib"/>
+    <property name = "doc.dir" value = "doc"/>
+    <property name = "view.dir" value = "src/view"/>
+
+    <property name = "manifest" value = "data/MMBT.mf"/>
+
+    <property name = "appName" value = "ija-app"/>
+    <property name = "zipBaseDirName" value = "xkincm02"/>
+
+
+
+    <target name = "build_and_run" description = "Building and running" depends = " build, development_run"/>
+
+
+    <target name = "development_run" description = "Executing the MMBT program">
+        <java fork = "true" failonerror = "yes" classname = "EntryPoint">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/*"/>
+            </classpath>
+        </java>
+    </target>
+
+
+    <target name = "compile" description = "Building and running" depends = " build, dist"/>
+
+
+    <target name = "generate_documentation" description = "Clean output directories">
+        <javadoc encoding="UTF-8" charset="UTF-8" sourcepath="src" destdir="doc">
+        </javadoc>
+    </target>
+
+
+    <target name = "build" description = "Compile source tree java files">
+        <mkdir dir = "${build.dir}"/>
+        <mkdir dir = "${view.dir}"/>
+        <copy file="src/view/mainPage.fxml" tofile="build/view/mainPage.fxml"/>
+        <copy file="src/view/streetView.fxml" tofile="build/view/streetView.fxml"/>
+        <javac includeantruntime="false" destdir = "${build.dir}">
+            <src path = "${src.dir}"/>
+            <classpath>
+                <path refid="master-classpath" />
+                <path refid="class.path" />
+            </classpath>
+        </javac>
+
+    </target>
+
+
+    <target name = "dist" description="creating the distribution file" depends="build">
+        <jar manifest="data/MMBT.mf" destfile="${dist.dir}/${appName}.jar" basedir="${build.dir}" >
+            <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
+            <fileset dir="${view.dir}"/>
+        </jar>
+        <copy file="data/lines.json" tofile="dest/data/lines.json"/>
+        <copy file="data/mapData.json" tofile="dest/data/mapData.json"/>
+    </target>
+
+
+    <target name = "run" description = "executing the application">
+        <java jar="${dist.dir}/${appName}.jar" fork="true" >
+        </java>
+    </target>
+
+
+    <target name = "clean" description = "Clean output directories" >
+        <delete includeemptydirs="true">
+            <fileset dir="build" includes="**/*"/>
+            <fileset dir="${dist.dir}" includes="**/*"/>
+            <fileset dir="${doc.dir}" includes="**/*"/>
+            <file file="lib/json-simple-1.1.1.jar"/>
+        </delete>
+
+        <delete file="lib/json-simple-1.1.1.jar"/>
+    </target>
+
+
+    <target name = "zip"  >
+        <zip destfile="dest/${zipBaseDirName}.zip">
+
+            <zipfileset dir="${basedir}" includes="build" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="data/**/*" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="dest" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="doc/**/*" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="lib/get-libs.sh" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="src/**/*" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="build.xml" prefix="${zipBaseDirName}/"/>
+            <zipfileset dir="${basedir}" includes="readme.txt" prefix="${zipBaseDirName}/"/>
+        </zip>
+    </target>
+
+
+
+
+    <path id = "master-classpath">
+        <fileset dir = "${src.dir}">
+            <include name = "*.jar"/>
+        </fileset>
+
+        <pathelement path = "${build.dir}"/>
+    </path>
+
+    <path id = "build-path">
+        <fileset dir = "build">
+        </fileset>
+    </path>
+
+    <path id="class.path">
+        <fileset dir="lib">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+
+</project>

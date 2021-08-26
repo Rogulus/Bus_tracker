@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPageController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="menuBar">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeProgram" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <TreeView fx:id="treeView" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="scrollPane">
+                     <content>
+                        <Group>
+                           <children>
+                              <Pane fx:id="map" />
+                           </children>
+                        </Group>
+                     </content>
+                  </ScrollPane>
+                  <Slider fx:id="zoomer" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" maxHeight="300.0" min="0.1" minorTickCount="1" onMouseReleased="#onZoomShift" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" value="1.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="15.0" top="15.0" />
+                     </padding>
+                  </Slider>
+               </children>
+            </StackPane>
+            <Group />
+            <HBox fx:id="controlsPanel" alignment="BOTTOM_LEFT" spacing="4.0">
+               <children>
+                  <Button id="stopButton" mnemonicParsing="false" onAction="#stopButtonClicked" prefWidth="80.0" text="Stop">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#resumeButtonClicked" prefWidth="80.0" text="Resume" />
+                  <Button mnemonicParsing="false" onAction="#plusButtonClicked" prefWidth="30.0" text="+">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#minusButtonClicked" prefWidth="30.0" text="-">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Label minWidth="25.0" prefHeight="25.0" text="Time Speed:" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="timeSpeedLabel" prefHeight="25.0" />
+                  <Label prefHeight="25.0" text="  Time:" />
+                  <Label fx:id="timeLabel" prefHeight="25.0" />
+                  <Button fx:id="setTimeButton" mnemonicParsing="false" onAction="#onSetTime" prefHeight="25.0" text="Set time" />
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

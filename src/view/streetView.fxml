@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="vbox" prefWidth="200.0" spacing="5.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="streetName" text="Street Name">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" onAction="#close" text="X" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Max speed: " />
+                  <Label fx:id="maxSpeed" text="50" />
+               </children>
+            </HBox>
+            <Slider fx:id="speedSetter" onMouseReleased="#onSpeedShift" prefHeight="44.0" prefWidth="190.0" showTickLabels="true" value="50.0">
+               <VBox.margin>
+                  <Insets right="5.0" top="5.0" />
+               </VBox.margin>
+            </Slider>
+            <Label text="Lines:" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</Pane>

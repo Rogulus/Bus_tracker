@@ -1,0 +1,458 @@
+{
+  "map": {
+    "width" : "1000",
+    "hight" : "1000",
+    "crossroads": [
+      {
+        "name" : "a",
+        "x" : "900",
+        "y" : "850"
+      },
+      {
+        "name" : "b",
+        "x" : "800",
+        "y" : "850"
+      },
+      {
+        "name" : "c",
+        "x" : "700",
+        "y" : "800"
+      },
+      {
+        "name" : "d",
+        "x" : "500",
+        "y" : "950"
+      },
+      {
+        "name" : "e",
+        "x" : "150",
+        "y" : "775"
+      },
+      {
+        "name" : "f",
+        "x" : "500",
+        "y" : "775"
+      },
+      {
+        "name" : "g",
+        "x" : "50",
+        "y" : "750"
+      },
+      {
+        "name" : "h",
+        "x" : "100",
+        "y" : "650"
+      },
+      {
+        "name" : "i",
+        "x" : "500",
+        "y" : "650"
+      },
+      {
+        "name" : "j",
+        "x" : "700",
+        "y" : "650"
+      },
+      {
+        "name" : "k",
+        "x" : "740",
+        "y" : "525"
+      },
+      {
+        "name" : "l",
+        "x" : "605",
+        "y" : "525"
+      },
+      {
+        "name" : "m",
+        "x" : "500",
+        "y" : "525"
+      },
+      {
+        "name" : "n",
+        "x" : "50",
+        "y" : "500"
+      },
+      {
+        "name" : "o",
+        "x" : "170",
+        "y" : "500"
+      },
+      {
+        "name" : "p",
+        "x" : "300",
+        "y" : "500"
+      },
+      {
+        "name" : "q",
+        "x" : "500",
+        "y" : "400"
+      },
+      {
+        "name" : "r",
+        "x" : "650",
+        "y" : "400"
+      },
+      {
+        "name" : "s",
+        "x" : "800",
+        "y" : "400"
+      },
+      {
+        "name" : "t",
+        "x" : "900",
+        "y" : "320"
+      },
+      {
+        "name" : "u",
+        "x" : "650",
+        "y" : "320"
+      },
+      {
+        "name" : "v",
+        "x" : "500",
+        "y" : "300"
+      },
+      {
+        "name" : "w",
+        "x" : "170",
+        "y" : "250"
+      },
+      {
+        "name" : "x",
+        "x" : "650",
+        "y" : "250"
+      },
+      {
+        "name" : "y",
+        "x" : "500",
+        "y" : "100"
+      },
+      {
+        "name" : "z",
+        "x" : "500",
+        "y" : "50"
+      }
+      
+    ],
+    "streets": [
+      {
+        "start" : "a",
+        "end" : "b",
+        "name" : "Trnová"
+      },
+      {
+        "start" : "b",
+        "end" : "c",
+        "name" : "Příční"
+      },
+      {
+        "start" : "c",
+        "end" : "j",
+        "name" : "Úzká"
+      },
+      {
+        "start" : "d",
+        "end" : "f",
+        "name" : "Příjezdová"
+      },
+      {
+        "start" : "j",
+        "end" : "f",
+        "name" : "Strmá"
+      },
+      {
+        "start" : "b",
+        "end" : "s",
+        "name" : "Stará"
+      },
+      {
+        "start" : "s",
+        "end" : "t",
+        "name" : "Tulipánová"
+      },
+      {
+        "start" : "s",
+        "end" : "k",
+        "name" : "Psí"
+      },
+      {
+        "start" : "k",
+        "end" : "j",
+        "name" : "Pod lesem"
+      },
+      {
+        "start" : "f",
+        "end" : "e",
+        "name" : "Javorová"
+      },
+      {
+        "start" : "f",
+        "end" : "i",
+        "name" : "Habrová"
+      },
+      {
+        "start" : "i",
+        "end" : "h",
+        "name" : "Divišova"
+      },
+      {
+        "start" : "e",
+        "end" : "h",
+        "name" : "Rudišova"
+      },
+      {
+        "start" : "e",
+        "end" : "g",
+        "name" : "Vut"
+      },
+      {
+        "start" : "g",
+        "end" : "h",
+        "name" : "Sibiřská"
+      },
+      {
+        "start" : "g",
+        "end" : "n",
+        "name" : "Skalky"
+      },
+      {
+        "start" : "h",
+        "end" : "p",
+        "name" : "Teplá"
+      },
+      {
+        "start" : "i",
+        "end" : "m",
+        "name" : "Hlavní"
+      },
+      {
+        "start" : "i",
+        "end" : "e",
+        "name" : "Studená"
+      },
+      {
+        "start" : "m",
+        "end" : "q",
+        "name" : "Vládní"
+      },
+      {
+        "start" : "m",
+        "end" : "l",
+        "name" : "Malá"
+      },
+      {
+        "start" : "k",
+        "end" : "l",
+        "name" : "Hrad"
+      },
+      {
+        "start" : "n",
+        "end" : "o",
+        "name" : "Mařákova"
+      },
+      {
+        "start" : "o",
+        "end" : "p",
+        "name" : "Tomanova"
+      },
+      {
+        "start" : "p",
+        "end" : "v",
+        "name" : "Dlouhá"
+      },
+      {
+        "start" : "q",
+        "end" : "r",
+        "name" : "Tovární"
+      },
+      {
+        "start" : "q",
+        "end" : "v",
+        "name" : "Třískalova"
+      },
+      {
+        "start" : "r",
+        "end" : "u",
+        "name" : "Nejedlého"
+      },
+      {
+        "start" : "u",
+        "end" : "t",
+        "name" : "Nováčkova"
+      },
+      {
+        "start" : "u",
+        "end" : "x",
+        "name" : "Wolkrova"
+      },
+      {
+        "start" : "x",
+        "end" : "y",
+        "name" : "Letní"
+      },
+      {
+        "start" : "v",
+        "end" : "y",
+        "name" : "Letecká"
+      },
+      {
+        "start" : "o",
+        "end" : "w",
+        "name" : "Máchova"
+      },
+      {
+        "start" : "w",
+        "end" : "y",
+        "name" : "Rovná"
+      },
+      {
+        "start" : "y",
+        "end" : "z",
+        "name" : "Revoluční"
+      }
+    ],
+    "stops": [
+      {
+        "street" : "Trnová",
+        "percentDistance" : "65",
+        "name" : "Trnová"
+      },
+      {
+        "street" : "Stará",
+        "percentDistance" : "25",
+        "name" : "Stará"
+      },
+      {
+        "street" : "Stará",
+        "percentDistance" : "75",
+        "name" : "Stará - u školy"
+      },
+      {
+        "street" : "Malá",
+        "percentDistance" : "30",
+        "name" : "Malá"
+      },
+      {
+        "street" : "Vládní",
+        "percentDistance" : "60",
+        "name" : "Vládní"
+      },
+      {
+        "street" : "Tovární",
+        "percentDistance" : "30",
+        "name" : "Tovární"
+      },
+      {
+        "street" : "Wolkrova",
+        "percentDistance" : "70",
+        "name" : "Wolkrova"
+      },
+      {
+        "street" : "Letní",
+        "percentDistance" : "38",
+        "name" : "Letní"
+      },
+      {
+        "street" : "Revoluční",
+        "percentDistance" : "80",
+        "name" : "Revoluční - točna"
+      },
+      {
+        "street" : "Tulipánová",
+        "percentDistance" : "20",
+        "name" : "Tulipánová"
+      },
+      {
+        "street" : "Psí",
+        "percentDistance" : "85",
+        "name" : "Na Vyhlídce - rozhledna"
+      },
+      {
+        "street" : "Pod lesem",
+        "percentDistance" : "65",
+        "name" : "Pod lesem"
+      },
+      {
+        "street" : "Strmá",
+        "percentDistance" : "45",
+        "name" : "Strmá"
+      },
+      {
+        "street" : "Habrová",
+        "percentDistance" : "62",
+        "name" : "Habrová"
+      },
+      {
+        "street" : "Studená",
+        "percentDistance" : "43",
+        "name" : "Studená"
+      },
+      {
+        "street" : "Rudišova",
+        "percentDistance" : "24",
+        "name" : "Rudišova"
+      },
+      {
+        "street" : "Teplá",
+        "percentDistance" : "83",
+        "name" : "Teplá - pod teplárnou"
+      },
+      {
+        "street" : "Tomanova",
+        "percentDistance" : "29",
+        "name" : "Tomanova"
+      },
+      {
+        "street" : "Máchova",
+        "percentDistance" : "48",
+        "name" : "Máchova"
+      },
+      {
+        "street" : "Rovná",
+        "percentDistance" : "36",
+        "name" : "Rovná"
+      },
+      {
+        "street" : "Příjezdová",
+        "percentDistance" : "20",
+        "name" : "Příjezdová"
+      },
+      {
+        "street" : "Javorová",
+        "percentDistance" : "60",
+        "name" : "Javorová"
+      },
+      {
+        "street" : "Vut",
+        "percentDistance" : "70",
+        "name" : "Vut"
+      },
+      {
+        "street" : "Skalky",
+        "percentDistance" : "58",
+        "name" : "Skalky - hřbitov"
+      },
+      {
+        "street" : "Mařákova",
+        "percentDistance" : "30",
+        "name" : "Mařákova"
+      },
+      {
+        "street" : "Dlouhá",
+        "percentDistance" : "53",
+        "name" : "Dlouhá"
+      },
+      {
+        "street" : "Psí",
+        "percentDistance" : "65",
+        "name" : "Vyhlídka - kopeček"
+      },
+      {
+        "street" : "Letecká",
+        "percentDistance" : "56",
+        "name" : "Letecká"
+      }
+    ]
+  }
+}
